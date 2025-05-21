@@ -51,8 +51,8 @@ The dataset used is the "Hotel Booking Demand" dataset, commonly found on platfo
 
 1.  **Clone the repository (if applicable):**
     ```bash
-    git clone [your-repository-link]
-    cd [repository-name]
+    git clone https://github.com/baysaint/hotel_booking_DSproject
+    cd hotel_booking_DSproject
     ```
 2.  **Create a virtual environment (recommended):**
     ```bash
@@ -138,7 +138,9 @@ Two models were trained and evaluated:
    - **Time Series Analysis**: If more granular daily/weekly booking data were available, time series forecasting could be used to predict demand and cancellations.
    - **Deployment**: Package the model into an API for integration with a hotel's booking system (using Flask/Django).
 ## Author
-   [Murat Gencoglu/GitHub Username: baysaint]
+   Murat Gencoglu 
+   
+GitHub: baysaint
 
 ## License
    MIT License
