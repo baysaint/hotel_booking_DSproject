@@ -1,0 +1,43 @@
+import pandas as pd
+
+# Replace 'new_hotel_data.csv' with the actual filename if different
+file_path = 'hotel_bookings.csv'
+
+try:
+    df_new = pd.read_csv(file_path)
+
+    print("--- DataFrame Info ---")
+    df_new.info()
+
+    print("\n--- DataFrame Head (First 5 rows) ---")
+    print(df_new.head())
+
+    print("\n--- Descriptive Statistics (for numerical columns) ---")
+    print(df_new.describe())
+
+    print("\n--- Missing Values (sum per column) ---")
+    print(df_new.isnull().sum())
+
+    print("\n--- Unique values in 'hotel' column (to see hotel types) ---")
+    if 'hotel' in df_new.columns:
+        print(df_new['hotel'].unique())
+    else:
+        print("'hotel' column not found.")
+
+    print("\n--- Unique values in 'is_canceled' column ---")
+    if 'is_canceled' in df_new.columns:
+        print(df_new['is_canceled'].unique())
+    else:
+        print("'is_canceled' column not found.")
+
+    print("\n--- Unique values in 'reservation_status' column ---")
+    if 'reservation_status' in df_new.columns:
+        print(df_new['reservation_status'].unique())
+    else:
+        print("'reservation_status' column not found.")
+
+
+except FileNotFoundError:
+    print(f"Error: The file '{file_path}' was not found. Please ensure it's in the correct directory.")
+except Exception as e:
+    print(f"An error occurred: {e}")
